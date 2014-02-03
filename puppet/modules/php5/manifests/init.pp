@@ -12,8 +12,9 @@ class php5::install {
 	  'php5-dev',
 	  'php5-xdebug',
 	  'php-pear',
+	  'php5-cli'
 	]:
-	ensure => present,
+	ensure => installed,
 	}
   
 	# upgrade pear

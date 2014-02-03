@@ -11,3 +11,4 @@ class { 'mysql::install': }
 class { 'wordpress::install': }
 class { 'phpmyadmin::install': }
 class { 'phpqa::install': }
+class { 'wp::cli': }
