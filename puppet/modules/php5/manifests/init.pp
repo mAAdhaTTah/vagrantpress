@@ -34,4 +34,14 @@ class php5::install {
 		command => "/usr/bin/pear update-channels",
 		require => [Package['php-pear']]
 	}
+	
+  file { '/etc/php5/apache2/php.ini':
+    ensure  => file,
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0644',
+    source  => '/vagrant/files/etc/php5/php.ini',
+    require => Package['php5'],
+    notify  => Service['apache2'],
+  }
 }
